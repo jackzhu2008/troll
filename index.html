@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domanda con opzioni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 20px 40px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        #no {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+            transform-origin: center center;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #333;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>你是笨蛋吗？</h2>
+    
+    <img src="mao.jpg" alt="immagine divertente" style="max-width: 100%; height: auto; margin: 20px 0;">
+
+    <button id="yes" onclick="goToSecondPage()">我是</button>
+    <button id="no" onclick="expandYes()">我不是</button>
+</div>
+
+<script>
+    let scaleFactor = 1;
+
+    function expandYes() {
+        const yesButton = document.getElementById('yes');
+        scaleFactor += 0.2;
+        yesButton.style.transform = `scale(${scaleFactor})`;
+    }
+
+    function goToSecondPage() {
+        window.location.href = "congratulazioni.html";
+    }
+</script>
+
+</body>
+</html>
