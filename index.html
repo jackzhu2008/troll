@@ -7,23 +7,42 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
         }
 
         .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         button {
-            padding: 20px 40px;
+            padding: 15px 30px;
             font-size: 18px;
             cursor: pointer;
             border: none;
+            border-radius: 8px;
             margin: 10px;
             transition: all 0.3s ease;
         }
@@ -51,11 +70,15 @@
 
 <div class="container">
     <h2>你是笨蛋吗？</h2>
-    
-    <img src="mao.jpg" alt="immagine divertente" style="max-width: 100%; height: auto; margin: 20px 0;">
 
-    <button id="yes" onclick="goToSecondPage()">我是</button>
-    <button id="no" onclick="expandYes()">我不是</button>
+    <img src="mao.jpg" alt="Immagine divertente" />
+
+    <div>
+        <button id="yes" onclick="goToSecondPage()">我是</button>
+        <button id="no" onclick="expandYes()">我不是</button>
+    </div>
+
+    <div id="message"></div>
 </div>
 
 <script>
